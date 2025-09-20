@@ -322,8 +322,6 @@ We welcome contributions from the community! Please follow these guidelines:
 <div align="center">
   <h3>🐝 TaskHive - Where Productivity Meets Simplicity</h3>
   <p><em>Built with ❤️ by developers, for developers</em></p>
-  
-  [![GitHub stars](https://img.shields.io/github/stars/your-username/taskhive?style=social)](https://github.com/your-username/taskhive/stargazers)
-  [![GitHub forks](https://img.shields.io/github/forks/your-username/taskhive?style=social)](https://github.com/your-username/taskhive/network/members)
-  [![GitHub issues](https://img.shields.io/github/issues/your-username/taskhive)](https://github.com/your-username/taskhive/issues)
+
 </div>
+
