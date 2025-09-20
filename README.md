@@ -330,7 +330,7 @@ We welcome contributions from the community! Please follow these guidelines:
 - **Discussions**: Community Q&A and general discussion
 
 ### 📧 Contact Information
-**Email**: support@taskhive.dev  
+**Email**: shashivadhan1911@gmail.com  
 **GitHub**: [Shashivadhan1911](https://github.com/Shashivadhan1911)  
 
 </div>
@@ -341,5 +341,6 @@ We welcome contributions from the community! Please follow these guidelines:
   <p><em>Built with ❤️ by developers, for developers</em></p>
 
 </div>
+
 
 
