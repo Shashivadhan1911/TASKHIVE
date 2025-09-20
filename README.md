@@ -1,232 +1,329 @@
-# TaskHive - Task Management Application
+# TaskHive 🐝
 
-A modern, full-stack task management application built with the MERN stack (MongoDB, Express.js, React, Node.js). TaskHive provides an intuitive interface for managing tasks, boards, and team collaboration with real-time features.
+<div align="center">
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
+  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express.js" />
+  <img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white" alt="JWT" />
+</div>
 
-## 🚀 Features
+<div align="center">
+  <h3>🚀 Modern Task Management Platform</h3>
+  <p><em>Streamline your workflow with intuitive project organization and real-time collaboration</em></p>
+</div>
 
-- **User Authentication**: Secure user registration and login system
-- **Task Management**: Create, edit, delete, and organize tasks
-- **Board System**: Kanban-style boards for project organization
-- **Drag & Drop**: Intuitive drag-and-drop functionality for task management
-- **Comments**: Add comments to tasks for better collaboration
-- **Real-time Updates**: Live updates across the application
-- **Responsive Design**: Mobile-friendly interface
-- **Security**: Rate limiting, CORS protection, input validation
+---
 
-## 🛠️ Tech Stack
+## 📖 Overview
 
-### Backend
-- **Node.js** - Runtime environment
-- **Express.js** - Web application framework
-- **MongoDB** - NoSQL database
-- **Mongoose** - MongoDB object modeling
-- **JWT** - Authentication tokens
-- **bcryptjs** - Password hashing
-- **CORS** - Cross-origin resource sharing
-- **Helmet** - Security middleware
-- **Morgan** - HTTP request logger
-- **express-rate-limit** - Rate limiting
+TaskHive is a comprehensive, full-stack task management application engineered with the MERN stack. Designed for modern teams and individuals, it combines powerful functionality with an intuitive user experience to enhance productivity and streamline project workflows.
 
-### Frontend
-- **React** - UI library
-- **Vite** - Build tool and dev server
-- **React Router** - Client-side routing
-- **Axios** - HTTP client
-- **@hello-pangea/dnd** - Drag and drop functionality
-- **date-fns** - Date utility library
+### ✨ Key Highlights
 
-## 📋 Prerequisites
+🔐 **Enterprise-Grade Security** - JWT authentication with bcrypt encryption  
+🎯 **Kanban-Style Boards** - Visual project organization with drag-and-drop  
+⚡ **Real-Time Collaboration** - Live updates and team synchronization  
+📱 **Responsive Design** - Optimized for desktop, tablet, and mobile  
+🛡️ **API Protection** - Rate limiting and comprehensive input validation
 
-- Node.js (v16 or higher)
-- MongoDB (local installation or MongoDB Atlas)
-- npm or yarn package manager
+---
 
-## 🚀 Installation
+## 🏗️ Technical Architecture
 
-### 1. Clone the Repository
+<div align="center">
+  
+| **Layer** | **Technology** | **Purpose** |
+|-----------|----------------|-------------|
+| Frontend | React + Vite | Modern UI with fast development |
+| Backend | Node.js + Express | RESTful API server |
+| Database | MongoDB + Mongoose | Document-based data storage |
+| Security | JWT + bcryptjs | Authentication & authorization |
+| DevOps | CORS + Helmet | Security middleware |
+
+</div>
+
+### 🔧 Technology Stack
+
+#### Backend Infrastructure
+```
+🟢 Node.js              Runtime environment
+🚀 Express.js           Web application framework
+🍃 MongoDB              NoSQL database solution
+📊 Mongoose             MongoDB object modeling
+🔑 JWT                  Token-based authentication
+🔒 bcryptjs             Password hashing
+🛡️ Helmet               Security headers
+📝 Morgan               HTTP request logging
+⚡ express-rate-limit   API rate limiting
+```
+
+#### Frontend Technologies
+```
+⚛️ React                Component-based UI library
+⚡ Vite                 Next-generation build tool
+🛣️ React Router         Client-side routing
+📡 Axios                HTTP client library
+🎯 @hello-pangea/dnd    Drag & drop functionality
+📅 date-fns             Date manipulation utilities
+```
+
+---
+
+## 🎯 Core Features
+
+### 👤 User Management
+- **Secure Authentication** - Robust login/registration system
+- **Profile Management** - User preferences and settings
+- **Session Management** - JWT-based secure sessions
+
+### 📋 Task Operations
+- **CRUD Operations** - Create, read, update, delete tasks
+- **Priority Levels** - Organize by importance and urgency  
+- **Status Tracking** - Monitor progress across workflows
+- **Due Date Management** - Timeline and deadline tracking
+
+### 📊 Board System
+- **Kanban Boards** - Visual workflow management
+- **Custom Columns** - Tailored project stages
+- **Drag & Drop** - Intuitive task reorganization
+- **Board Templates** - Quick project setup
+
+### 💬 Collaboration Tools
+- **Task Comments** - Threaded discussions
+- **Team Sharing** - Multi-user board access
+- **Activity Feeds** - Real-time project updates
+- **Notification System** - Stay informed of changes
+
+---
+
+## 🚀 Quick Start Guide
+
+### Prerequisites
+
+Ensure you have the following installed:
+- **Node.js** v16.0.0 or higher
+- **MongoDB** 4.4+ (local or Atlas)
+- **npm** or **yarn** package manager
+
+### Installation Steps
+
+#### 1️⃣ Repository Setup
 ```bash
-git clone <repository-url>
+git clone https://github.com/your-username/taskhive.git
 cd taskhive
 ```
 
-### 2. Backend Setup
+#### 2️⃣ Backend Configuration
 ```bash
 cd taskhive_backend
 npm install
 ```
 
-Create a `.env` file in the `taskhive_backend` directory:
-```env
+Create your environment configuration:
+```bash
+# .env file
 PORT=5000
 MONGODB_URI=mongodb://localhost:27017/taskhive
-JWT_SECRET=your-super-secret-jwt-key
+JWT_SECRET=your-256-bit-secret-key
 NODE_ENV=development
+CORS_ORIGIN=http://localhost:5173
 ```
 
-### 3. Frontend Setup
+#### 3️⃣ Frontend Setup
 ```bash
 cd ../taskhive_frontend
 npm install
 ```
 
-### 4. Start the Application
-
-#### Development Mode (Recommended)
+#### 4️⃣ Launch Application
 ```bash
-# Terminal 1 - Backend
+# Terminal 1 - Backend Server
 cd taskhive_backend
 npm run dev
 
-# Terminal 2 - Frontend
+# Terminal 2 - Frontend Server
 cd taskhive_frontend
 npm run dev
 ```
 
-#### Production Mode
-```bash
-# Backend
-cd taskhive_backend
-npm start
+### 🌐 Access Points
+- **Frontend Application**: http://localhost:5173
+- **Backend API**: http://localhost:5000
+- **API Health Check**: http://localhost:5000/api/health
 
-# Frontend
-cd taskhive_frontend
-npm run build
-npm run preview
+---
+
+## 📚 API Documentation
+
+### 🔐 Authentication Endpoints
+```http
+POST   /api/auth/register    # User registration
+POST   /api/auth/login       # User authentication
+GET    /api/auth/profile     # Retrieve user profile
+POST   /api/auth/logout      # Session termination
 ```
 
-The application will be available at:
-- Frontend: http://localhost:5173
-- Backend API: http://localhost:5000
-- API Health Check: http://localhost:5000/api/health
+### 📊 Board Management
+```http
+GET    /api/boards           # List all boards
+POST   /api/boards           # Create new board
+GET    /api/boards/:id       # Retrieve specific board
+PUT    /api/boards/:id       # Update board details
+DELETE /api/boards/:id       # Remove board
+```
 
-## 📖 Usage
+### 📝 Task Operations
+```http
+GET    /api/tasks            # List all tasks
+POST   /api/tasks            # Create new task
+GET    /api/tasks/:id        # Retrieve specific task
+PUT    /api/tasks/:id        # Update task details
+DELETE /api/tasks/:id        # Remove task
+PATCH  /api/tasks/:id/status # Update task status
+```
 
-### User Registration & Login
-1. Open the application in your browser
-2. Register a new account or login with existing credentials
-3. Access the dashboard to start managing tasks
+### 💬 Comment System
+```http
+GET    /api/comments/:taskId # List task comments
+POST   /api/comments/:taskId # Add new comment
+PUT    /api/comments/:id     # Update comment
+DELETE /api/comments/:id     # Remove comment
+```
 
-### Creating Tasks
-1. Navigate to the Dashboard
-2. Click "Add Task" to create a new task
-3. Fill in task details and assign to a board
-
-### Managing Boards
-1. Create new boards for different projects
-2. Organize tasks within boards
-3. Use drag-and-drop to move tasks between columns
-
-### Collaboration
-- Add comments to tasks for team communication
-- Share boards with team members
-- Track task progress in real-time
-
-## 🔌 API Endpoints
-
-### Authentication
-- `POST /api/auth/register` - User registration
-- `POST /api/auth/login` - User login
-- `GET /api/auth/profile` - Get user profile
-
-### Boards
-- `GET /api/boards` - Get all boards
-- `POST /api/boards` - Create new board
-- `GET /api/boards/:id` - Get board by ID
-- `PUT /api/boards/:id` - Update board
-- `DELETE /api/boards/:id` - Delete board
-
-### Tasks
-- `GET /api/tasks` - Get all tasks
-- `POST /api/tasks` - Create new task
-- `GET /api/tasks/:id` - Get task by ID
-- `PUT /api/tasks/:id` - Update task
-- `DELETE /api/tasks/:id` - Delete task
-
-### Comments
-- `GET /api/comments/:taskId` - Get comments for a task
-- `POST /api/comments/:taskId` - Add comment to task
-- `DELETE /api/comments/:id` - Delete comment
+---
 
 ## 📁 Project Structure
 
 ```
 taskhive/
-├── taskhive_backend/          # Backend application
-│   ├── config/               # Database configuration
-│   ├── controllers/          # Route controllers
-│   ├── middleware/           # Custom middleware
-│   ├── models/              # Database models
-│   ├── routes/              # API routes
-│   └── server.js            # Application entry point
-├── taskhive_frontend/        # Frontend application
-│   ├── public/              # Static assets
-│   ├── src/
-│   │   ├── components/      # React components
-│   │   ├── context/         # React context providers
-│   │   ├── pages/           # Page components
-│   │   ├── services/        # API services
-│   │   └── App.jsx          # Main application component
-│   └── index.html           # HTML template
-└── README.md                # Project documentation
+├── 🗂️ taskhive_backend/
+│   ├── 📁 config/           # Database & app configuration
+│   ├── 📁 controllers/      # Business logic handlers
+│   ├── 📁 middleware/       # Custom middleware functions
+│   ├── 📁 models/           # Database schemas
+│   ├── 📁 routes/           # API endpoint definitions
+│   ├── 📁 utils/            # Helper functions
+│   ├── 📄 server.js         # Application entry point
+│   └── 📄 package.json      # Backend dependencies
+│
+├── 🗂️ taskhive_frontend/
+│   ├── 📁 public/           # Static assets
+│   ├── 📁 src/
+│   │   ├── 📁 components/   # Reusable UI components
+│   │   ├── 📁 context/      # React context providers
+│   │   ├── 📁 hooks/        # Custom React hooks
+│   │   ├── 📁 pages/        # Route page components
+│   │   ├── 📁 services/     # API communication
+│   │   ├── 📁 styles/       # Global styling
+│   │   └── 📄 App.jsx       # Root application component
+│   ├── 📄 index.html        # HTML template
+│   ├── 📄 package.json      # Frontend dependencies
+│   └── 📄 vite.config.js    # Build configuration
+│
+├── 📄 README.md             # Project documentation
+└── 📄 .gitignore           # Version control exclusions
 ```
-
-## 🧪 Development Scripts
-
-### Backend
-- `npm run dev` - Start development server with nodemon
-- `npm start` - Start production server
-- `npm run server` - Alias for development server
-
-### Frontend
-- `npm run dev` - Start Vite development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
-
-## 🔒 Security Features
-
-- Password hashing with bcryptjs
-- JWT authentication
-- Rate limiting (100 requests per 15 minutes)
-- CORS protection
-- Helmet security headers
-- Input validation and sanitization
-- Error handling middleware
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📝 Environment Variables
-
-### Backend (.env)
-```env
-PORT=5000
-MONGODB_URI=mongodb://localhost:27017/taskhive
-JWT_SECRET=your-super-secret-jwt-key
-NODE_ENV=development
-```
-
-## 📄 License
-
-This project is licensed under the ISC License - see the LICENSE file for details.
-
-## 👥 Support
-
-For support, email [your-email@example.com] or create an issue in the repository.
-
-## 🔄 Recent Updates
-
-- Enhanced drag-and-drop functionality
-- Improved error handling
-- Added rate limiting for API protection
-- Mobile-responsive design improvements
-- Real-time task updates
 
 ---
 
-**TaskHive** - Streamline your workflow with modern task management.
+## 🛡️ Security Implementation
+
+### 🔒 Authentication & Authorization
+- **JWT Tokens** - Stateless authentication mechanism
+- **Password Hashing** - bcryptjs with salt rounds
+- **Protected Routes** - Middleware-based authorization
+- **Token Expiration** - Automatic session management
+
+### 🛡️ API Security
+- **Rate Limiting** - 100 requests per 15-minute window
+- **CORS Policy** - Cross-origin request protection
+- **Input Validation** - Comprehensive data sanitization
+- **Security Headers** - Helmet.js middleware implementation
+
+### 📊 Monitoring & Logging
+- **Request Logging** - Morgan HTTP logger
+- **Error Handling** - Centralized error management
+- **Health Checks** - System status monitoring
+
+---
+
+## 🚀 Development Commands
+
+### Backend Scripts
+```bash
+npm run dev      # Development server with hot reload
+npm start        # Production server
+npm run test     # Run test suites
+npm run lint     # Code linting
+```
+
+### Frontend Scripts
+```bash
+npm run dev      # Vite development server
+npm run build    # Production build
+npm run preview  # Preview production build
+npm run lint     # ESLint code analysis
+```
+
+---
+
+## 🌟 User Experience
+
+### 🎨 Design Principles
+- **Minimalist Interface** - Clean, distraction-free design
+- **Intuitive Navigation** - Self-explanatory user flows
+- **Responsive Layout** - Seamless cross-device experience
+- **Accessibility** - WCAG 2.1 compliance standards
+
+### 📱 Mobile Optimization
+- **Touch-Friendly** - Optimized for mobile interactions
+- **Progressive Web App** - App-like mobile experience
+- **Offline Support** - Limited functionality without internet
+- **Performance** - Fast loading on mobile networks
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions from the community! Please follow these guidelines:
+
+### 📋 Contribution Process
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
+3. **Commit** changes (`git commit -m 'feat: add amazing feature'`)
+4. **Push** to branch (`git push origin feature/amazing-feature`)
+5. **Submit** a Pull Request
+
+### 📝 Development Guidelines
+- Follow existing code style and conventions
+- Write comprehensive tests for new features
+- Update documentation for API changes
+- Ensure all tests pass before submission
+
+---
+
+## 📞 Support & Community
+
+<div align="center">
+
+### 🆘 Getting Help
+- **Documentation**: Comprehensive guides and API reference
+- **Issues**: Report bugs or request features on GitHub
+- **Discussions**: Community Q&A and general discussion
+
+### 📧 Contact Information
+**Email**: support@taskhive.dev  
+**GitHub**: [Shashivadhan1911](https://github.com/Shashivadhan1911)  
+
+</div>
+
+
+<div align="center">
+  <h3>🐝 TaskHive - Where Productivity Meets Simplicity</h3>
+  <p><em>Built with ❤️ by developers, for developers</em></p>
+  
+  [![GitHub stars](https://img.shields.io/github/stars/your-username/taskhive?style=social)](https://github.com/your-username/taskhive/stargazers)
+  [![GitHub forks](https://img.shields.io/github/forks/your-username/taskhive?style=social)](https://github.com/your-username/taskhive/network/members)
+  [![GitHub issues](https://img.shields.io/github/issues/your-username/taskhive)](https://github.com/your-username/taskhive/issues)
+</div>
