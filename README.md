@@ -165,7 +165,7 @@ npm run dev
 ```
 
 ### 🌐 Access Points
-- **Frontend Application**: http://localhost:5173
+- **Frontend Application**: http://localhost:3000
 - **Backend API**: http://localhost:5000
 - **API Health Check**: http://localhost:5000/api/health
 
@@ -341,6 +341,7 @@ We welcome contributions from the community! Please follow these guidelines:
   <p><em>Built with ❤️ by developers, for developers</em></p>
 
 </div>
+
 
 
 
