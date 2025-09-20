@@ -97,6 +97,23 @@ TaskHive is a comprehensive, full-stack task management application engineered w
 
 ---
 
+## 🖼️ Screenshots
+
+<div align="center">
+  <img src="register.png" alt="login" width="45%" />
+  <img src="dash.png" alt="DASHBOARD" width="45%" /> 
+</div>
+<div align="center">
+  <img src="board.png" alt="BOARD" width="45%" />
+  <img src="dash_hello.png" alt="welcome" width="45%" /> 
+  
+</div>
+<div align="center">
+  <img src="task.png" alt="TASK Section" width="45%" />
+  <img src="alltask.png" alt="ALL Task" width="45%" />
+</div>
+
+
 ## 🚀 Quick Start Guide
 
 ### Prerequisites
@@ -324,4 +341,5 @@ We welcome contributions from the community! Please follow these guidelines:
   <p><em>Built with ❤️ by developers, for developers</em></p>
 
 </div>
+
 
